@@ -1,0 +1,3 @@
+JMH S 23 application.MyBenchmark S 69 application.generated.MyBenchmark_testTraverseGraphDepthFirst_jmhTest S 27 testTraverseGraphDepthFirst S 11 AverageTime E A 1 1 1 E I 1 5 T 3 1 s E I 1 5 T 3 1 s E I 1 1 E E E E E E U 11 NANOSECONDS E E 
+JMH S 23 application.MyBenchmark S 68 application.generated.MyBenchmark_testFindAllPathsDepthFirst_jmhTest S 26 testFindAllPathsDepthFirst S 11 AverageTime E A 1 1 1 E I 1 5 T 3 1 s E I 1 5 T 3 1 s E I 1 1 E E E E E E U 11 NANOSECONDS E E 
+JMH S 23 application.MyBenchmark S 63 application.generated.MyBenchmark_findingPathDepthFirst_jmhTest S 21 findingPathDepthFirst S 11 AverageTime E A 1 1 1 E I 1 5 T 3 1 s E I 1 5 T 3 1 s E I 1 1 E E E E E E U 11 NANOSECONDS E E 

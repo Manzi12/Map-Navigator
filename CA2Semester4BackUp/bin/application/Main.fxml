@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox minHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefWidth="700.0" spacing="5.0">
+         <children>
+            <Label text="Zoom" />
+            <Button fx:id="maxZoom" mnemonicParsing="false" onAction="#zoomOut" text="-" />
+            <Slider fx:id="zoomSlider" />
+            <Button fx:id="minZoom" mnemonicParsing="false" onAction="#zoomIn" text="+" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </HBox>
+      <SplitPane dividerPositions="0.3" VBox.vgrow="ALWAYS">
+         <items>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+               <children>
+                  <Label text="Source">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="sourcelist" prefWidth="150.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </ChoiceBox>
+                  <Label text="Destination">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="destinationlist" prefWidth="150.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </ChoiceBox>
+                  <Label text="City Avoid Options">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ChoiceBox fx:id="cityavoidance" prefWidth="150.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </ChoiceBox>
+                  <Label text="Waypoint Options">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="waypointList" prefWidth="150.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </ChoiceBox>
+                  <HBox>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <children>
+                        <VBox alignment="TOP_CENTER" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#cityAvoidance" text="City Avoid function">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#waypointFuction" prefHeight="25.0" prefWidth="114.0" text="WayPoint Fuction">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#generatingSinglePath" prefHeight="25.0" prefWidth="114.0" text=" Route">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#generatingMultplePaths" prefHeight="25.0" prefWidth="114.0" text="multple routes">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#shortest" prefHeight="25.0" prefWidth="114.0" text="Shortest Path">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#easiestPath" prefHeight="25.0" prefWidth="114.0" text="Easiest Path">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#safestRoute" prefHeight="25.0" prefWidth="114.0" text="Safest Path" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <VBox />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <ScrollPane fx:id="mapScrollpane" prefHeight="200.0" prefWidth="200.0">
+               <content>
+                  <Pane fx:id="mypane">
+                     <children>
+                        <ImageView fx:id="imageView" layoutX="14.0" onMouseClicked="#pinMove">
+                           <image>
+                              <Image url="@../../../../../../Year%20Two/Semester%20Four/Data%20Structures%20&amp;%20algorithms/CA2%20resources/got.jpg" />
+                           </image>
+                        </ImageView>
+                        <MenuButton fx:id="map_pin1" layoutX="38.0" layoutY="125.0" mnemonicParsing="false" styleClass="map-pin1" stylesheets="@../../style.css">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Action 1" />
+                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                          </items>
+                        </MenuButton>
+                        <MenuButton fx:id="map_pin2" layoutX="137.0" layoutY="248.0" mnemonicParsing="false" styleClass="map-pin2" stylesheets="@../../style.css">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Action 1" />
+                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                          </items>
+                        </MenuButton>
+                     </children>
+                  </Pane>
+               </content>
+            </ScrollPane>
+         </items>
+      </SplitPane>
+   </children>
+</VBox>
